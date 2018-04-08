@@ -26,10 +26,14 @@ def validate():
     if (not username) or (username.strip() == ""):
         username_error = "Not a valid username"
         username = ''
+        password = ''
+        vpassword = ''
     else:
         if len(username) > 20 or len(username) < 3:
             username_error = "That username is too short/ long"
             username = ''
+            password= ''
+            vpassword = ''
     
     if (not password) or (password.strip() == ""):
         password_error = "Not a valid password"
@@ -39,16 +43,25 @@ def validate():
             password_error = "That password is too long/short"
             password = ''
     
+    if (not vpassword) or (vpassword.strip() == ""):
+        vpassword_error = "That's not a valid password"
+        vpassword = ''
+        password = ''
     if vpassword != password:
             vpassword_error = "Oops, your passwords don't match."
             vpassword = ''
+            password = ''
     if email != "":
-        if '@'not in email:
+        if '@' not in email:
             email_error = "Oops, you're missing an '@' sign." 
             email = ''
-        if '.' not in email:
+            password = ''
+            vpassword = ''
+        elif '.' not in email:
             email_error = "Oops, you're missing a period!"
             email = ''
+            password = ''
+            vpassword = ''
         else:
             if len(email) > 20 or len(email) <3:
                 email_error = "That email is too long/short"

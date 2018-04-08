@@ -6,25 +6,25 @@
 </head>
 <body>
 
-    <h1> Signup </h1>
+    <h1> User-Signup </h1>
         <form method="POST">
             <label>Username
-                <input name="username" type="text" value="{{username}}">
+                <input name="username" type="text" value="{{username}}"><a class="error"> {{username_error}}</a>    
             </label>
-            <p class="error">{{username_error}}</p>
-            <label>Password
+
+            <p></p><label>Password
                 <input name="password" type="password" value="{{password}}">
             </label>
-            <p class="error">{{password_error}}</p>
-            <label>Verify Password
+            <a class="error"> {{password_error}}</a>
+            <p></p><label>Verify Password
                 <input name="vpassword" type="password" value="{{vpassword}}">
             </label>
-            <p class="error">{{vpassword_error}}</p>
-            <label>Email (optional)
+            <a class="error"> {{vpassword_error}}</a>
+            <p></p><label>Email (optional)
                 <input name="email" type="text" value="{{email}}">
             </label>
-            <p class="error">{{email_error}}</p>
-            <input type="submit" value="Submit Query">
+            <a class="error"> {{email_error}}</a>
+            <p></p><input type="submit" value="Submit Query">
         </form>
 
 </body></html>
